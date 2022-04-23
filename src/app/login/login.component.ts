@@ -52,7 +52,7 @@ this.temp=res;
     }else{
     //  alert('please rgister if you are new');
       // this.route.navigate(['register']);
-      alert('hello..');
+      alert('hello......');
     }
   }
   this.isSubmitted =true;

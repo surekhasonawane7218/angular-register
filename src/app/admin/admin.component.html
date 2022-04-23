@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center mb-4 align-items-center">
+    <h5 class="me-3">WellCome Admin </h5>
+   
+</div>
+
+<table class="table table-striped">
+<tr>
+    <th>ID</th>
+    <th>
+        User Name
+    </th>
+    <th>Age</th>
+    <th>Employee ID</th>
+    <th>Branch</th>
+    <th>Role</th>
+    <th>edit</th>
+    <th>delete</th>
+</tr>
+<tr *ngFor="let dt of admin">
+    <td>{{dt.id}}</td>
+    <td>{{dt.name}}</td>
+    <td>{{dt.age}}</td>
+    <td>{{dt.empId}}</td>
+    <td>{{dt.branch}}</td>
+    <td>{{dt.role}}</td>
+    <td><button type="button" (click)="onEdit(dt.id,dt)"  [ngStyle]="{backgroundColor:'var(--cyan-500)'}" class="btn btn-info">Edit</button></td>
+    <td><button type="button" (click)="onDelete(dt.id)" [ngStyle]="{backgroundColor:'var(--red-500)'}" class="btn btn-danger text-dark">Delete</button></td>
+</tr>
+</table>
+

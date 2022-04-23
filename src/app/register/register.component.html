@@ -1,0 +1,52 @@
+
+<div class="container mt-4" >
+   
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+    <h3 class="text-center">Register</h3>
+            <form class="p-4 alert-warning"  [formGroup]="registerForm" (ngSubmit)="submitForm()" [ngStyle]="{backgroundColor:'var(--teal-500)'}">
+                <div class="form-group mb-3">
+                    <label for="name">Enter Name</label>
+                    <input type="text" placeholder="enter your name" class="form-control mt-2" name="name" formControlName="name"
+                    [ngClass]="{'is-invalid': f.name.touched && f.name.errors}">
+                    <div *ngIf="f.name.touched && f.name.errors?.required" class="invalid-fedback" style="color:red">please enter your name</div>
+                </div>
+                <div class="form-group  mb-3">
+                    <label for="age">Enter Age</label>
+                    <input type="text" placeholder="enter your age" class="form-control mt-2" name="age" formControlName="age"
+                    [ngClass]="{'is-invalid': f.age.touched && f.age.errors}">
+                    <div *ngIf="f.age.touched && f.age.errors?.required" class="invalid-fedback" style="color:red">please enter your age</div>
+                </div> 
+                <div class="form-group  mb-3">
+                    <label for="empId">Enter Employee Id</label>
+                    <input type="text" placeholder="enter your empId" class="form-control mt-2" name="empId" formControlName="empId"
+                    [ngClass]="{'is-invalid': f.empId.touched && f.empId.errors}">
+                    <div *ngIf="f.empId.touched && f.empId.errors?.required" class="invalid-fedback"
+                    style="color:red">please enter your empId</div>
+                        
+                </div>
+            
+                <div class="form-group  mb-3">
+                    <label for="branch">Enter Branch</label>
+                    <input type="text" placeholder="enter your branch" class="form-control mt-2" name="branch" formControlName="branch"
+                    [ngClass]="{'is-invalid': f.branch.touched && f.branch.errors}">
+                    <div *ngIf="f.branch.touched && f.branch.errors?.required" class="invalid-fedback" style="color:red">please enter your branch</div>
+                        
+                </div>
+            
+                <div class="form-group mb-3">
+                    <label for="role">Enter Role</label>
+                    <input type="text" placeholder="enter your Role" class="form-control mt-2" name="role" formControlName="role"
+                    [ngClass]="{'is-invalid': f.role.touched && f.role.errors}">
+                    <div *ngIf="f.role.touched && f.role.errors?.required" class="invalid-fedback" style="color:red">please enter your role</div>
+                        
+                </div>
+        <div class="d-flex justify-content-center">
+            <button type="save" [ngStyle]="{backgroundColor:'var(--cyan-900)'}" class="btn text-white me-2" [disabled]="!registerForm.valid">save</button>
+            <button type="reset" [ngStyle]="{backgroundColor:'var(--cyan-900)'}" class="btn text-white">reset</button>
+    
+        </div>
+            </form>
+        </div>
+    </div>
+</div>

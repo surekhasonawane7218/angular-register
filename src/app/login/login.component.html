@@ -1,0 +1,23 @@
+
+
+<div class="div-class d-flex justify-content-center p-2 mt-3">
+    <form [ngStyle]="{backgroundColor:'var(--cyan-800)'}" class="p-2" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label text-white">User Name</label>
+          <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="name">
+          <div id="emailHelp" class="form-text text-gray" [ngStyle]="{color:'var(--cyan-300)'}">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label text-white">Employee Id</label>
+          <input type="number" name="empId" class="form-control " id="exampleInputPassword1" formControlName="empId">
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn alert-warning" [ngStyle]="{'background-color':'--cyan-200'}" (click)="onSubmit()">Submit</button>
+        </div>
+    
+      </form>
+</div>
